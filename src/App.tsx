@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css'
+import Hero from "./components/Hero.tsx";
 import Navbar from "./components/Navbar.tsx";
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
       <Navbar
         isDarkMode={isDarkMode}
         onToggleTheme={() => setIsDarkMode(!isDarkMode)} />
+
+      <main>
+        <Hero />
+      </main>
+
     </>
   );
 }
