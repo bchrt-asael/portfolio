@@ -6,7 +6,12 @@ const navItems = [
     { href: "#technologies", label: "Technologies" },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+    isDarkMode: boolean;
+    onToggleTheme: () => void;
+}
+
+export default function Navbar({ isDarkMode, onToggleTheme }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -38,6 +43,25 @@ export default function Navbar() {
                         Me contacter
                     </a>
                 </div>
+
+                <button
+                    type="button"
+                    className="inline-flex items-center justify-center rounded-md p-2 text-[var(--text-h)] transition hover:bg-[var(--accent-bg)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                    aria-label={isDarkMode ? "Activer le mode clair" : "Activer le mode sombre"}
+                    aria-pressed={isDarkMode}
+                    onClick={onToggleTheme}
+                >
+                    {isDarkMode ? (
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+                            <circle cx="12" cy="12" r="4" />
+                            <path strokeLinecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+                        </svg>
+                    ) : (
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" />
+                        </svg>
+                    )}
+                </button>
 
                 <button
                     type="button"
