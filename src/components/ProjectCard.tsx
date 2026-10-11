@@ -1,10 +1,11 @@
-import { useState } from "react"
+import Carousel from "./Carousel.tsx"
 
 interface ProjectCardProps {
     title: string
     description: string
     technologies: string[]
     image: string
+    imageFolder?: string
     github: string
     demo?: string
 }
@@ -14,28 +15,17 @@ export default function ProjectCard({
     description,
     technologies,
     image,
+    imageFolder,
     github,
     demo,
 }: ProjectCardProps) {
-    const [hasImageError, setHasImageError] = useState(false)
-
     return (
-        <article className="group overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--surface-hover)]">
-            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-[var(--surface-muted)]">
-                {!hasImageError ? (
-                    <img
-                        src={image}
-                        alt={`Aperçu de ${title}`}
-                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                        onError={() => setHasImageError(true)}
-                    />
-                ) : (
-                    <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[var(--accent-bg)] to-transparent p-6 text-center">
-                        <span aria-hidden="true" className="text-4xl font-bold text-[var(--accent)]">&lt;/&gt;</span>
-                        <span className="text-sm font-medium text-[var(--muted-text)]">{title}</span>
-                    </div>
-                )}
-            </div>
+        <article className="group overflow-hidden w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--surface-hover)]">
+            <Carousel
+                image={image}
+                imageFolder={imageFolder}
+                title={title}
+            />
 
             <div className="p-6">
                 <h3 className="text-2xl font-semibold text-[var(--text-h)]">
