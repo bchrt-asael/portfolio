@@ -1,23 +1,17 @@
 import { technologies } from "../data/technologies.ts"
+import SectionTitle from "./SectionTitle.tsx";
 
 export default function Technologies() {
     return (
         <section
             id="technologies"
-            className="border border-[var(--border)] rounded-2xl bg-[var(--surface)] px-6 py-14 lg:py-16"
+            className="border border-[var(--border)] rounded-2xl outline-grey-200 bg-[var(--surface)] px-6 py-14 lg:py-20"
         >
             <div className="mx-auto max-w-6xl">
 
-                <div className="max-w-2xl mx-auto text-center">
-                    <p className="text-3xl font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
-                        Technologies
-                    </p>
-
-                    <h2 className="mt-3 text-2xl font-bold tracking-tight text-[var(--text-h)] md:text-5xl">
-                        Les outils avec lesquels je travaille.
-                    </h2>
-
-                </div>
+                <SectionTitle
+                    title="Technologies"
+                    subtitle="Les outils avec lesquels je travaille." />
 
                 <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
 

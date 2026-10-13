@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard"
 import { projects } from "../data/projects.ts"
+import SectionTitle from "./SectionTitle.tsx";
 
 export default function Projects() {
     const featuredProject = projects.find((project) => project.id === 1);
@@ -7,19 +8,13 @@ export default function Projects() {
     const otherProjects = projects.filter((project) => project.id !== 1);
 
     return (
-        <section id="projects" className="px-6 py-24">
+        <section id="projects" className="px-6 py-14 lg:py-20">
 
             <div className="mx-auto max-w-6xl">
 
-                <div className="mb-12">
-                    <p className="text-3xl font-semibold uppercase tracking-widest text-[var(--accent)]">
-                        Projets
-                    </p>
-
-                    <h2 className="mt-3 text-2xl font-bold text-[var(--text-h)] md:text-5xl">
-                        Ce que j'ai construit.
-                    </h2>
-                </div>
+                <SectionTitle
+                    title="Projets"
+                    subtitle="Ce que j'ai construit." />
 
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-[repeat(2,1fr)]">
                     {featuredProject && (
