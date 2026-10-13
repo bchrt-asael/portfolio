@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar.tsx";
 import Projects from './components/Projects.tsx';
 import About from './components/About.tsx';
 import Technologies from './components/Technologies.tsx';
+import Contact from './components/Contact.tsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -24,6 +25,7 @@ function App() {
         <Projects />
         <About />
         <Technologies />
+        <Contact />
       </main>
 
     </>
