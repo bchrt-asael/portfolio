@@ -6,6 +6,7 @@ import Projects from './components/Projects.tsx';
 import About from './components/About.tsx';
 import Technologies from './components/Technologies.tsx';
 import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -26,6 +27,7 @@ function App() {
         <About />
         <Technologies />
         <Contact />
+        <Footer />
       </main>
 
     </>
