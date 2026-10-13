@@ -8,6 +8,7 @@ interface ProjectCardProps {
     imageFolder?: string
     github: string
     demo?: string
+    featured?: boolean
 }
 
 export default function ProjectCard({
@@ -18,25 +19,28 @@ export default function ProjectCard({
     imageFolder,
     github,
     demo,
+    featured = false,
 }: ProjectCardProps) {
     return (
-        <article className="group overflow-hidden w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--surface-hover)]">
+        <article className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--surface-hover)] 
+        ${featured ? "md:col-span-2 md:grid md:grid-cols-2 md:min-h-[400px]" : ""}`}>
             <Carousel
                 image={image}
                 imageFolder={imageFolder}
                 title={title}
+                className={`${featured ? "md:aspect-auto md:h-full md:min-h-[250px]" : ""}`}
             />
 
-            <div className="p-6">
+            <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-2xl font-semibold text-[var(--text-h)]">
                     {title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-[var(--text)]">
+                <p className="mt-3! leading-7 text-[var(--text)]">
                     {description}
                 </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2 pointer-events-none">
                     {technologies.map((technology) => (
                         <span
                             key={technology}
@@ -47,7 +51,7 @@ export default function ProjectCard({
                     ))}
                 </div>
 
-                <div className="mt-6 flex gap-4">
+                <div className="mt-auto flex gap-4 pt-6">
                     {github && github !== "#" && (
                         <a
                             href={github}

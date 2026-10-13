@@ -29,7 +29,7 @@ export const projects = [
     image: "/projects/portfolio.png",
     imageFolder: "portfolio",
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Docker"],
-    github: "#",
+    github: "https://github.com/bchrt-asael/portfolio/",
     demo: "#",
   },
 ];

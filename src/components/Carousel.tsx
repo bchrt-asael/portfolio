@@ -9,10 +9,12 @@ export default function Carousel({
     image,
     imageFolder,
     title,
+    className = "",
 }: {
     image: string
     imageFolder?: string
     title: string
+    className?: string
 }) {
     const images = Object.entries(projectImages)
         .filter(([path]) => path.split("/").at(-2) === imageFolder)
@@ -37,13 +39,13 @@ export default function Carousel({
     }, [slideCount])
 
     return (
-        <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-[var(--surface-muted)]">
+        <div className={`relative flex aspect-video w-full items-center justify-center overflow-hidden bg-[var(--surface-muted)] ${className}`}>
             {failedImage !== currentImage ? (
                 <img
                     key={currentImage}
                     alt={`Aperçu de ${title}`}
                     src={currentImage}
-                    className="h-full w-full object-cover transition-opacity duration-500"
+                    className="h-full w-full object-contain transition-opacity duration-500 bg-white"
                     onError={() => setFailedImage(currentImage)}
                 />
             ) : (
