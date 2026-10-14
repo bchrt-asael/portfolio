@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const projectImages = import.meta.glob<string>(
-    "../assets/projects/*/*.{png,jpg,jpeg,webp,avif}",
+    "../assets/projects/*/*.{png,jpg,jpeg,webp,avif,gif}",
     { eager: true, query: "?url", import: "default" },
 )
 
