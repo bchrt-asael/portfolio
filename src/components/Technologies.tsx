@@ -12,7 +12,7 @@ export default function Technologies() {
                 title="Technologies"
                 subtitle="Les outils avec lesquels je travaille." />
 
-            <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            <div data-reveal data-reveal-delay="2" className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
 
                 {technologies.map((technology) => (
                     <div

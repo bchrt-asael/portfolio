@@ -5,22 +5,22 @@ const Hero = () => {
             className="mx-auto grid min-h-screen w-full max-w-6xl items-center gap-14 px-6 pb-20 pt-32 lg:grid-cols-[1.1fr_0.9fr]"
         >
             <div className="text-left">
-                <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--accent-bg)] px-4 py-2 text-sm font-medium text-[var(--accent)]">
+                <p data-reveal className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--accent-bg)] px-4 py-2 text-sm font-medium text-[var(--accent)]">
                     <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
                     Bonjour, moi c&apos;est Asa&euml;l
                 </p>
 
-                <h1 className="mb-6 mt-0 text-5xl font-bold leading-[1.08] tracking-tight text-[var(--text-h)] md:text-6xl">
+                <h1 data-reveal data-reveal-delay="1" className="mb-6 mt-0 text-5xl font-bold leading-[1.08] tracking-tight text-[var(--text-h)] md:text-6xl">
                     Développeur web
                     <span className="mt-2 block text-[var(--accent)]">junior.</span>
                 </h1>
 
-                <p className="max-w-xl text-lg leading-8 text-[var(--text)]">
+                <p data-reveal data-reveal-delay="2" className="max-w-xl text-lg leading-8 text-[var(--text)]">
                     Je conçois des applications web modernes et je recherche
                     actuellement une alternance en développement Fullstack.
                 </p>
 
-                <div className="mt-8 flex flex-wrap items-center gap-4">
+                <div data-reveal data-reveal-delay="3" className="mt-8 flex flex-wrap items-center gap-4">
                     <a
                         href="#projects"
                         className="rounded-full bg-[var(--accent)] px-6 py-3 font-semibold text-[var(--accent-text)] transition hover:shadow-[0_0_20px_3px] hover:shadow-indigo-400 hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
@@ -35,13 +35,13 @@ const Hero = () => {
                     </a>
                 </div>
 
-                <p className="mt-8! text-sm text-[var(--muted-text)]">
+                <p data-reveal data-reveal-delay="3" className="mt-8! text-sm text-[var(--muted-text)]">
                     Basé à Reims <span className="mx-2 text-[var(--accent)]">·</span>
                     Ouvert aux opportunités en alternance
                 </p>
             </div>
 
-            <div className="relative mx-auto w-full max-w-sm">
+            <div data-reveal data-reveal-delay="2" className="relative mx-auto w-full max-w-sm">
                 <div
                     aria-hidden="true"
                     className="absolute inset-3 rotate-6 rounded-[2rem] bg-[var(--accent-bg)]"

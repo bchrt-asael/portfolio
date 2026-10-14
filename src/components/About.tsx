@@ -1,20 +1,19 @@
+import SectionTitle from "./SectionTitle";
+
 export default function About() {
     return (
         <section id="about" className="max-w-6xl mx-auto px-6 py-14 lg:py-20">
 
             <div className="max-w-2xl mx-auto text-center">
-                <p className="text-3xl font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
-                    &Agrave; propos
-                </p>
-
-                <h2 className="mt-3 text-2xl font-bold tracking-tight text-[var(--text-h)] md:text-5xl">
-                    Mon parcours
-                </h2>
+                <SectionTitle
+                    title="&Agrave; propos"
+                    subtitle="Mon parcours"
+                />
 
             </div>
 
             <div className="mt-10 grid items-start gap-10 md:grid-cols-[1.4fr_0.8fr] md:gap-16">
-                <div className="flex max-w-prose flex-col gap-3 text-left text-sm leading-7 text-[var(--text)] md:leading-8">
+                <div data-reveal data-reveal-delay="2" className="flex max-w-prose flex-col gap-3 text-left text-sm leading-7 text-[var(--text)] md:leading-8">
                     <p>
                         Je suis <strong className="font-semibold text-[var(--text-h)]">Asa&euml;l BACHARAT</strong>, d&eacute;veloppeur full-stack passionn&eacute; par la conception d’applications web.
                     </p>
@@ -38,7 +37,7 @@ export default function About() {
                     </p>
                 </div>
 
-                <aside className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5.5 text-left shadow-[var(--shadow)]">
+                <aside data-reveal data-reveal-delay="3" className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5.5 text-left shadow-[var(--shadow)]">
                     <h3 className="text-xl font-semibold text-[var(--text-h)]">
                         En bref
                     </h3>
