@@ -85,11 +85,6 @@ export const technologies = [
     icon: "/img/technologies/phpmyadmin.webp",
   },
   {
-    name: ".NET",
-    category: "Programming",
-    icon: "/img/technologies/net.webp",
-  },
-  {
     name: "PDO",
     category: "Programming",
     icon: "/img/technologies/pdo.webp",
