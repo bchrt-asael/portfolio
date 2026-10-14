@@ -7,6 +7,7 @@ import About from './components/About.tsx';
 import Technologies from './components/Technologies.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
+import ScrollFadeIn from './ScrollFadeIn.tsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -21,14 +22,16 @@ function App() {
         isDarkMode={isDarkMode}
         onToggleTheme={() => setIsDarkMode(!isDarkMode)} />
 
-      <main>
-        <Hero />
-        <Projects />
-        <About />
-        <Technologies />
-        <Contact />
-        <Footer />
-      </main>
+      <ScrollFadeIn>
+        <main>
+          <Hero />
+          <Projects />
+          <About />
+          <Technologies />
+          <Contact />
+          <Footer />
+        </main>
+      </ScrollFadeIn>
 
     </>
   );
