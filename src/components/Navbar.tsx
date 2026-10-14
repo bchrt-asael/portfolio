@@ -4,6 +4,7 @@ const navItems = [
     { href: "#projects", label: "Projets" },
     { href: "#about", label: "À propos" },
     { href: "#technologies", label: "Technologies" },
+    { href: "/CV_BACHARAT_Asael.pdf", label: "CV" },
 ];
 
 interface NavbarProps {
@@ -36,12 +37,6 @@ export default function Navbar({ isDarkMode, onToggleTheme }: NavbarProps) {
                             {label}
                         </a>
                     ))}
-                    <a
-                        href="#contact"
-                        className="rounded-full bg-[var(--accent)] px-5 py-2 text-sm font-semibold text-[var(--accent-text)] transition hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-                    >
-                        Me contacter
-                    </a>
                 </div>
 
                 <button
@@ -98,13 +93,6 @@ export default function Navbar({ isDarkMode, onToggleTheme }: NavbarProps) {
                             {label}
                         </a>
                     ))}
-                    <a
-                        href="#contact"
-                        className="mt-2 rounded-full bg-[var(--accent)] px-5 py-3 text-center text-sm font-semibold text-[var(--accent-text)] transition hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        Me contacter
-                    </a>
                 </div>
             </div>
         </header>
