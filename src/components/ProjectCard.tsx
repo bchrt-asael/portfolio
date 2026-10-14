@@ -22,8 +22,8 @@ export default function ProjectCard({
     featured = false,
 }: ProjectCardProps) {
     return (
-        <article className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--surface-hover)] 
-        ${featured ? "md:col-span-2 md:grid md:grid-cols-2 md:min-h-[400px]" : ""}`}>
+        <article className={`group flex max-w-6xl mx-auto h-full flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--surface-hover)] 
+        ${featured ? "md:col-span-2 md:grid md:grid-cols-[1.5fr_1fr] md:min-h-[400px] max-w-6xl mx-auto" : ""}`}>
             <Carousel
                 image={image}
                 imageFolder={imageFolder}

@@ -45,7 +45,7 @@ export default function Carousel({
                     key={currentImage}
                     alt={`Aperçu de ${title}`}
                     src={currentImage}
-                    className="h-full w-full object-contain transition-opacity duration-500 bg-white"
+                    className="h-full w-full object-cover transition-opacity duration-500 bg-white"
                     onError={() => setFailedImage(currentImage)}
                 />
             ) : (
