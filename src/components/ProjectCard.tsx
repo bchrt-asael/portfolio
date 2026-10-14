@@ -31,8 +31,8 @@ export default function ProjectCard({
                 className={`${featured ? "md:aspect-auto md:h-full md:min-h-[250px]" : ""}`}
             />
 
-            <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-2xl font-semibold text-[var(--text-h)]">
+            <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 className="text-xl font-semibold text-[var(--text-h)] sm:text-2xl">
                     {title}
                 </h3>
 

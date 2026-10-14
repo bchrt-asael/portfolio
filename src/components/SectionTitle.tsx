@@ -5,12 +5,12 @@ export default function SectionTitle({ title, subtitle, children }: {
     children?: React.ReactNode;
 }) {
     return (
-        <div className="max-w-2xl mx-auto mb-12 text-center">
-            <p data-reveal data-reveal-delay="1" className="text-3xl font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+            <p data-reveal data-reveal-delay="1" className="text-3xl font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:tracking-[0.2em]">
                 {title}
             </p>
 
-            <h2 data-reveal data-reveal-delay="1" className="mt-3 text-2xl font-bold tracking-tight text-[var(--text-h)] md:text-5xl">
+            <h2 data-reveal data-reveal-delay="1" className="mt-3 text-2xl font-bold tracking-tight text-[var(--text-h)]">
                 {children ?? subtitle}
             </h2>
 

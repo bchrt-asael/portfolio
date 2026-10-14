@@ -2,7 +2,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function About() {
     return (
-        <section id="about" className="max-w-6xl mx-auto px-6 py-14 lg:py-20">
+        <section id="about" className="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-14 lg:py-20">
 
             <div className="max-w-2xl mx-auto text-center">
                 <SectionTitle
@@ -12,8 +12,8 @@ export default function About() {
 
             </div>
 
-            <div className="mt-10 grid items-start gap-10 md:grid-cols-[1.4fr_0.8fr] md:gap-16">
-                <div data-reveal data-reveal-delay="2" className="flex max-w-prose flex-col gap-3 text-left text-sm leading-7 text-[var(--text)] md:leading-8">
+            <div className="mt-8 grid items-start gap-8 lg:mt-10 lg:grid-cols-[1.4fr_0.8fr] lg:gap-16">
+                <div data-reveal data-reveal-delay="2" className="flex max-w-prose flex-col gap-3 text-left text-sm text-wrap leading-7 text-[var(--text)] md:leading-8">
                     <p>
                         Je suis <strong className="font-semibold text-[var(--text-h)]">Asa&euml;l BACHARAT</strong>, d&eacute;veloppeur full-stack passionn&eacute; par la conception d’applications web.
                     </p>

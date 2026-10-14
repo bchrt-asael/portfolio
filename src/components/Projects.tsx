@@ -8,7 +8,7 @@ export default function Projects() {
     const otherProjects = projects.filter((project) => project.id !== 1);
 
     return (
-        <section id="projects" className="mx-auto max-w-6xl px-6 py-14 lg:py-20">
+        <section id="projects" className="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-14 lg:py-20">
 
             <div>
 

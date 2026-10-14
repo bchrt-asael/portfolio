@@ -2,7 +2,7 @@ import SectionTitle from "./SectionTitle.tsx";
 
 export default function Contact() {
     return (
-        <section id="contact" className="px-6 py-14 lg:py-20">
+        <section id="contact" className="px-5 py-12 sm:px-6 sm:py-14 lg:py-20">
 
             <div className="relative mx-auto max-w-3xl text-center">
 
@@ -11,7 +11,7 @@ export default function Contact() {
                     className="pointer-events-none absolute inset-3 -rotate-3 rounded-3xl bg-[var(--accent-bg)]"
                 />
 
-                <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow)] md:p-16">
+                <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow)] sm:p-8 md:p-16">
 
                     <div className="pointer-events-none absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent-bg)] blur-3xl" />
 
@@ -21,7 +21,7 @@ export default function Contact() {
                         Parlons-en.
                     </SectionTitle>
 
-                    <p className="relative mx-auto! mt-6! max-w-lg text-base leading-8 text-[var(--text)]">
+                    <p className="relative mx-auto! mt-6! max-w-lg text-sm leading-7 text-[var(--text)] sm:text-base sm:leading-8">
                         Une question, une idée de projet ou une opportunité professionnelle ? Je serais ravi d’échanger avec vous. <br />
                         N’hésitez pas à me contacter !
                     </p>
